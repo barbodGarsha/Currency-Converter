@@ -57,9 +57,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.converter form.converter__form {
+.converter .input form.converter__form {
   background-color: #504749;
   border-radius: 10px;
   display: -webkit-box;
@@ -72,11 +75,11 @@ img {
   padding: 1rem;
 }
 
-.converter form.converter__form p {
+.converter .input form.converter__form p {
   color: #EDE7D0;
 }
 
-.converter form.converter__form select {
+.converter .input form.converter__form select {
   font-size: 2rem;
   color: #504749;
   background-color: #B4B592;
@@ -86,7 +89,7 @@ img {
   padding: .5rem 1rem;
 }
 
-.converter form.converter__form .amount {
+.converter .input form.converter__form .amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +100,7 @@ img {
   margin-bottom: 1rem;
 }
 
-.converter form.converter__form .amount input {
+.converter .input form.converter__form .amount input {
   font-size: 2rem;
   color: #504749;
   background-color: #B4B592;
@@ -110,7 +113,7 @@ img {
   padding: .5rem 1rem;
 }
 
-.converter form.converter__form .currencies {
+.converter .input form.converter__form .currencies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,16 +126,21 @@ img {
   margin-bottom: 1rem;
 }
 
-.converter form.converter__form .currencies img {
+.converter .input form.converter__form .currencies img {
   width: 2.5rem;
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
 }
 
-.converter form.converter__form .results {
+.converter .input form.converter__form .results {
   background-color: #B4B592;
   border-radius: 10px;
   font-size: 2rem;
   padding: .5rem 1rem;
+}
+
+.converter .keyboard {
+  width: 20rem;
+  background-color: #504749;
 }
 /*# sourceMappingURL=main.css.map */
