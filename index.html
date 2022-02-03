@@ -9,6 +9,46 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    
+    <div class="dark-mode-cta">
+        <p class="dark-mode">Dark Mode</p>
+        <div class="dark-mode__switch"> <div class="dark-mode__switch-key"></div></div>
+    </div>
+    <div class="converter">
+        <div class="input">
+            <form action="" class="converter__form">
+                <div class="currencies">
+                    <div class="from">
+                        <p class="subhead">From</p>
+                        <select>
+                          <option value="0">Select a Currency:</option>
+                          <option value="1">Audi</option>
+                        </select>
+                    </div>
+                    
+                    <img src="img/swap.svg" alt="Swap Currencies">
+                    
+                    <div class="to">
+                        <p class="subhead">To</p>
+                        <select>
+                          <option value="0">Select a Currency:</option>
+                          <option value="1">Audi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <p class="subhead">Enter Amount</p>
+                    <input type="text" name="amount" id="amount">
+                </div>
+
+                <div class="results">
+                    <p class="converter__result">999.99$</p>
+                </div>
+            </form>
+        </div>
+        <div class="keyboard">
+
+        </div>
+    </div>
 </body>
 </html>
