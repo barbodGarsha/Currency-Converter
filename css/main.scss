@@ -3,11 +3,47 @@
 body {
     background-color: #EDE7D0;
     margin: 0;
-    padding: 0;
+    padding: 5rem;
 
     font-family: 'Poppins', sans-serif;
 }
 
+a, li, h1, h2, p {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+}
+
 img {
     width: 50px;
+}
+
+.dark-mode-cta {
+    display: flex;
+    align-items: center;
+
+    p.dark-mode {
+        color: #504749;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+
+    .dark-mode__switch {
+        position: relative;
+        background-color: #B4B592;
+        width: 4rem;
+        height: 2rem;
+        border-radius: 30px;
+        .dark-mode__switch-key {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #504749;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+    }
 }
