@@ -24,6 +24,7 @@ img {
     align-items: center;
 
     p.dark-mode {
+        cursor: pointer;
         color: #504749;
         font-size: 2rem;
         font-weight: bold;
@@ -31,6 +32,7 @@ img {
     }
 
     .dark-mode__switch {
+        cursor: pointer;
         position: relative;
         background-color: #B4B592;
         width: 4rem;
@@ -44,6 +46,66 @@ img {
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
+        }
+    }
+}
+
+.converter {
+    display: flex;
+    form.converter__form {
+        background-color: #504749;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+
+        p {
+            color: #EDE7D0;
+        }
+        select {
+            font-size: 2rem;
+            color: #504749;
+            background-color: #B4B592;
+            border: none;
+            width: 17rem;
+            border-radius: 10px;
+            padding: .5rem 1rem;
+        }
+        .amount {
+            display: flex;
+            flex-direction: column;
+            input {
+                font-size: 2rem;
+                color: #504749;
+                background-color: #B4B592;
+                border: none;
+                border-radius: 10px;
+                width: 40rem;
+                align-self: center;
+                padding: .5rem 1rem;
+            }
+            margin-bottom: 1rem;
+        }
+       
+        .currencies {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 2.5rem;
+                transform: translateY(.6rem);
+            }
+            
+            margin-bottom: 1rem;
+        }
+
+        .results {
+            background-color: #B4B592;
+            border-radius: 10px;
+            
+            font-size: 2rem;
+            padding: .5rem 1rem;
         }
     }
 }
