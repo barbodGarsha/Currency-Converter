@@ -1,5 +1,13 @@
 const currencies_options = document.getElementsByClassName("currencies-options")
-console.log(currencies_options)
+const currencies_swap_btn = document.getElementsByClassName("currencies-swap")[0]
+
+currencies_swap_btn.addEventListener('click', function(e){
+  const c1_index = currencies_options[0].selectedIndex
+  const c2_index = currencies_options[1].selectedIndex
+
+  currencies_options[0].selectedIndex = c2_index
+  currencies_options[1].selectedIndex = c1_index
+})
 
 //API----------------------------------------------------------
 const frankfurter_api_url = 'https://api.frankfurter.app'
@@ -19,6 +27,7 @@ async function get_currencies() {
     count++
   }
 }
+
 
 get_currencies()
 

@@ -127,6 +127,7 @@ img {
 }
 
 .converter .input form.converter__form .currencies img {
+  cursor: pointer;
   width: 2.5rem;
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
