@@ -13,7 +13,7 @@ async function get_currencies() {
   const data = await response.json();
   
   for (var key in data) {
-    console.log(' name=' + key + ' value=' + data[key])
+    console.log('name=' + key + ' value=' + data[key])
   }
 }
 
