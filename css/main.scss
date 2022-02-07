@@ -118,7 +118,49 @@ img {
     }
 
     .keyboard {
-        width: 20rem;
-        background-color: #504749;
+        display: flex;
+        .keyboard__numbers {
+            display: grid;
+            grid-template-columns: 8rem 8rem 8rem;
+            grid-template-rows: 6rem 6rem 6rem 6rem;
+            grid-gap: 1rem;
+
+            margin-right: 2rem;
+        }
+        
+        .keyboard__operators {
+            display: grid;
+            grid-template-columns: 8rem;
+            grid-template-rows: 6rem 6rem 6rem;
+            grid-gap: 1rem;
+        }
+
+        .key {
+            cursor: pointer;
+            background-color: #504749;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            p {
+                color: #EDE7D0;
+                font-weight: bold;
+                font-size: 2rem;      
+            }
+        }
+
+        .key:hover {
+            background-color: #504749e3;
+        }
+        
+        .double-width{      
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .double-height{      
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
     }
 }
