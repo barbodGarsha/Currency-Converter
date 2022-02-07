@@ -2,6 +2,14 @@ const currencies_options = document.querySelectorAll("[data-currencies-options]"
 const currencies_swap_btn = document.querySelector("[data-currencies-swap]")
 const amount_input = document.querySelector("[data-amount]")
 const result_display = document.querySelector("[data-results]")
+const converter_form = document.querySelector("[data-converter-form]")
+
+
+converter_form.addEventListener('submit', function(e) {
+e.preventDefault()
+//TODO: ERROR HANDLING
+execute_conversion()
+})
 
 currencies_swap_btn.addEventListener('click', function(e){
   const c1_index = currencies_options[0].selectedIndex
@@ -18,7 +26,7 @@ async function get_currencies() {
   const response = await fetch(frankfurter_api_url + '/currencies')
   const data = await response.json()
   
-  let count = 0;
+  let count = 0
   for (var key in data) {
     const option = document.createElement('option')
     option.value = key
@@ -46,6 +54,5 @@ async function convert_currencies(c1, c2, amount) {
   const data = await response.json()
   
   result_display.innerText = amount + " " + c1 + " " + data.rates[c2] + " " + c2
-  console.log(`${amount} ${c1} = ${data.rates[c2]} ${c2}`)
 }
 

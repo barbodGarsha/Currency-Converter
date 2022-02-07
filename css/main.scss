@@ -104,11 +104,15 @@ img {
             }
     
             .results {
+                display: flex;
                 background-color: #B4B592;
                 border-radius: 10px;
-                
+                height: 3.5rem;
                 font-size: 2rem;
                 padding: .5rem 1rem;
+                .converter__result {
+                    align-self: center;
+                }
             }
         }
     }

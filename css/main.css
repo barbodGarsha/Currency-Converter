@@ -134,10 +134,20 @@ img {
 }
 
 .converter .input form.converter__form .results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #B4B592;
   border-radius: 10px;
+  height: 3.5rem;
   font-size: 2rem;
   padding: .5rem 1rem;
+}
+
+.converter .input form.converter__form .results .converter__result {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .converter .keyboard {
