@@ -3,7 +3,23 @@ const currencies_swap_btn = document.querySelector("[data-currencies-swap]")
 const amount_input = document.querySelector("[data-amount]")
 const result_display = document.querySelector("[data-results]")
 const converter_form = document.querySelector("[data-converter-form]")
+const numpad = document.querySelector("[data-numpad]")
+const operators = document.querySelector("[data-operators]")
 
+numpad.addEventListener('click', function(e) {
+  var input;
+  if(e.target.nodeName == 'DIV' && e.target.classList.contains('key')) {
+    input = e.target.children[0].innerText
+  }
+  else if (e.target.nodeName == 'P') {
+    input = e.target.innerText
+  }
+  else {
+    return
+  }
+  //TODO: Error handling for the inputs
+  amount_input.value += input
+})
 
 converter_form.addEventListener('submit', function(e) {
   e.preventDefault()
@@ -17,7 +33,6 @@ converter_form.addEventListener('submit', function(e) {
     alert("Please choose different currencies!")
     return
   }
-  //TODO: ERROR HANDLING
   execute_conversion()
 })
 
