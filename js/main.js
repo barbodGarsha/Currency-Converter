@@ -6,9 +6,19 @@ const converter_form = document.querySelector("[data-converter-form]")
 
 
 converter_form.addEventListener('submit', function(e) {
-e.preventDefault()
-//TODO: ERROR HANDLING
-execute_conversion()
+  e.preventDefault()
+  var ex = /^[0-9]+\.?[0-9]*$/
+  if(ex.test(amount_input.value)==false){
+    alert("Please enter valid input!")
+    return
+  }
+
+  if(currencies_options[0].value === currencies_options[1].value){
+    alert("Please choose different currencies!")
+    return
+  }
+  //TODO: ERROR HANDLING
+  execute_conversion()
 })
 
 currencies_swap_btn.addEventListener('click', function(e){
@@ -18,7 +28,6 @@ currencies_swap_btn.addEventListener('click', function(e){
   currencies_options[0].selectedIndex = c2_index
   currencies_options[1].selectedIndex = c1_index
 })
-
 //API----------------------------------------------------------
 const frankfurter_api_url = 'https://api.frankfurter.app'
 
