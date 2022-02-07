@@ -6,6 +6,29 @@ const converter_form = document.querySelector("[data-converter-form]")
 const numpad = document.querySelector("[data-numpad]")
 const operators = document.querySelector("[data-operators]")
 
+operators.addEventListener('click', function(e) {
+  var input;
+  if(e.target.nodeName == 'DIV' && e.target.classList.contains('key')) {
+    input = e.target.children[0].innerText
+  }
+  else if (e.target.nodeName == 'P') {
+    input = e.target.innerText
+  }
+  else {
+    return
+  }
+
+  if(input == 'Enter') {
+    execute_conversion()
+  }
+  else if(input == 'Del.') {
+    amount_input.value = amount_input.value.slice(0, -1)
+  }
+  else if(input == 'Clear') {
+    amount_input.value = ''
+  }
+})
+
 numpad.addEventListener('click', function(e) {
   var input;
   if(e.target.nodeName == 'DIV' && e.target.classList.contains('key')) {
@@ -23,16 +46,6 @@ numpad.addEventListener('click', function(e) {
 
 converter_form.addEventListener('submit', function(e) {
   e.preventDefault()
-  var ex = /^[0-9]+\.?[0-9]*$/
-  if(ex.test(amount_input.value)==false){
-    alert("Please enter valid input!")
-    return
-  }
-
-  if(currencies_options[0].value === currencies_options[1].value){
-    alert("Please choose different currencies!")
-    return
-  }
   execute_conversion()
 })
 
@@ -63,6 +76,17 @@ async function get_currencies() {
 }
 
 function execute_conversion() {
+  var filter = /^[0-9]+\.?[0-9]*$/
+  if(filter.test(amount_input.value)==false){
+    alert("Please enter valid input!")
+    return
+  }
+
+  if(currencies_options[0].value === currencies_options[1].value){
+    alert("Please choose different currencies!")
+    return
+  }
+
   const c1 = currencies_options[0].value
   const c2 = currencies_options[1].value
   const amount = amount_input.value
