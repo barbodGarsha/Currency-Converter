@@ -15,6 +15,13 @@ a, li, h1, h2, p {
     z-index: 9999;
 }
 
+input {
+    -webkit-appearance: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 img {
     width: 50px;
 }
@@ -23,7 +30,7 @@ img {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    
+
     p.dark-mode {
         cursor: pointer;
         color: #504749;
@@ -55,6 +62,7 @@ img {
     display: flex;
     justify-content: space-between;
     .input {
+        width: 50%;
         form.converter__form {
             background-color: #504749;
             border-radius: 10px;
@@ -62,42 +70,54 @@ img {
             flex-direction: column;
             padding: 1rem;
     
-    
             p {
                 color: #EDE7D0;
+                margin-bottom: .2rem;
+            }
+            p.converter__result {
+                color: #504749;
+                margin-bottom: 0;
             }
             select {
+                cursor: pointer;
                 font-size: 2rem;
                 color: #504749;
                 background-color: #B4B592;
                 border: none;
-                width: 17rem;
+                width: 100%;
                 border-radius: 10px;
                 padding: .5rem 1rem;
             }
             .amount {
                 display: flex;
                 flex-direction: column;
+                .amount-container {
+                    background-color: #B4B592;
+                    padding: .5rem 1rem;
+                    border-radius: 10px;
+                }
                 input {
                     font-size: 2rem;
                     color: #504749;
-                    background-color: #B4B592;
                     border: none;
-                    border-radius: 10px;
-                    width: 40rem;
+                    background-color: #B4B592;
+                    width: 100%;
                     align-self: center;
-                    padding: .5rem 1rem;
                 }
-                margin-bottom: 1rem;
+                
+                margin-bottom: 1.1rem;
             }
            
             .currencies {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                .from, .to {
+                    width: 45%;
+                }
                 img {
                     cursor: pointer;
-                    width: 2.5rem;
+                    width: 5%;
                     transform: translateY(.6rem);
                 }
                 
@@ -114,12 +134,16 @@ img {
                 .converter__result {
                     align-self: center;
                 }
+                
             }
         }
     }
 
     .keyboard {
+        justify-content: flex-end;
         display: flex;
+        width: 50%;
+        padding: 0 1rem;
         .keyboard__numbers {
             display: grid;
             grid-template-columns: 8rem 8rem 8rem;

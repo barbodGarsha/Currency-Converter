@@ -13,6 +13,12 @@ a, li, h1, h2, p {
   z-index: 9999;
 }
 
+input {
+  -webkit-appearance: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
 img {
   width: 50px;
 }
@@ -63,6 +69,10 @@ img {
           justify-content: space-between;
 }
 
+.converter .input {
+  width: 50%;
+}
+
 .converter .input form.converter__form {
   background-color: #504749;
   border-radius: 10px;
@@ -78,14 +88,21 @@ img {
 
 .converter .input form.converter__form p {
   color: #EDE7D0;
+  margin-bottom: .2rem;
+}
+
+.converter .input form.converter__form p.converter__result {
+  color: #504749;
+  margin-bottom: 0;
 }
 
 .converter .input form.converter__form select {
+  cursor: pointer;
   font-size: 2rem;
   color: #504749;
   background-color: #B4B592;
   border: none;
-  width: 17rem;
+  width: 100%;
   border-radius: 10px;
   padding: .5rem 1rem;
 }
@@ -98,20 +115,24 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.converter .input form.converter__form .amount .amount-container {
+  background-color: #B4B592;
+  padding: .5rem 1rem;
+  border-radius: 10px;
 }
 
 .converter .input form.converter__form .amount input {
   font-size: 2rem;
   color: #504749;
-  background-color: #B4B592;
   border: none;
-  border-radius: 10px;
-  width: 40rem;
+  background-color: #B4B592;
+  width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: .5rem 1rem;
 }
 
 .converter .input form.converter__form .currencies {
@@ -127,9 +148,13 @@ img {
   margin-bottom: 1rem;
 }
 
+.converter .input form.converter__form .currencies .from, .converter .input form.converter__form .currencies .to {
+  width: 45%;
+}
+
 .converter .input form.converter__form .currencies img {
   cursor: pointer;
-  width: 2.5rem;
+  width: 5%;
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
 }
@@ -152,9 +177,14 @@ img {
 }
 
 .converter .keyboard {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 50%;
+  padding: 0 1rem;
 }
 
 .converter .keyboard .keyboard__numbers {
