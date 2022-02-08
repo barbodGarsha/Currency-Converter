@@ -5,6 +5,22 @@ const result_display = document.querySelector("[data-results]")
 const converter_form = document.querySelector("[data-converter-form]")
 const numpad = document.querySelector("[data-numpad]")
 const operators = document.querySelector("[data-operators]")
+const dark_mode_btn = document.querySelector("[data-dark-mode]")
+const dark_mode_switch_key = document.querySelector("[data-dark-mode__switch-key]")
+
+let dark_mode_on = false
+
+dark_mode_btn.addEventListener('click', function(e) {
+  if(dark_mode_on)
+  {
+    dark_mode_on = false
+    dark_mode_switch_key.style.transform = null
+  }
+  else {
+    dark_mode_on = true
+    dark_mode_switch_key.style.transform = "translateX(100%)"
+  }
+})
 
 operators.addEventListener('click', function(e) {
   var input;
