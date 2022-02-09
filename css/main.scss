@@ -69,6 +69,7 @@ img {
 .converter {
     display: flex;
     justify-content: space-between;
+    
     .input {
         width: 50%;
         form.converter__form.dark-mode-off {
@@ -183,18 +184,20 @@ img {
         width: 50%;
         padding: 0 1rem;
         .keyboard__numbers {
+            width: 85%;
             display: grid;
-            grid-template-columns: 8rem 8rem 8rem;
-            grid-template-rows: 6rem 6rem 6rem 6rem;
+            grid-template-columns: 33fr 33fr 33fr;
+            grid-template-rows: 25fr 25fr 25fr 25fr;
             grid-gap: 1rem;
 
             margin-right: 2rem;
         }
         
         .keyboard__operators {
+            width: 25%;
             display: grid;
-            grid-template-columns: 8rem;
-            grid-template-rows: 6rem 6rem 6rem;
+            grid-template-columns: 100fr;
+            grid-template-rows: 25fr 25fr 25fr 25fr;
             grid-gap: 1rem;
         }
         
@@ -237,3 +240,52 @@ img {
         }
     }
 }
+
+@media screen and (max-width: 1385px) {
+    :root {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    :root {
+        font-size: .65rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    :root {
+        font-size: .55rem;
+    }
+}
+
+@media screen and (max-width: 725px) {
+   .converter {
+       flex-direction: column;
+       align-items: center;
+       .input {
+           width: 100%;
+           margin-bottom: 2rem;
+        }
+
+        .keyboard {
+            height: 30vh;
+            justify-content: center;
+            width: 100%;
+        }
+   }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        font-size: .45rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    :root {
+        font-size: .35rem;
+    }
+}
+
+
