@@ -1,11 +1,14 @@
 const currencies_options = document.querySelectorAll("[data-currencies-options]")
 const currencies_swap_btn = document.querySelector("[data-currencies-swap]")
 const amount_input = document.querySelector("[data-amount]")
+const amount_cta = document.querySelector("[data-amount-cta]")
 const result_display = document.querySelector("[data-results]")
+const result_display_cta = document.querySelector("[data-results-cta]")
 const converter_form = document.querySelector("[data-converter-form]")
 const numpad = document.querySelector("[data-numpad]")
 const operators = document.querySelector("[data-operators]")
 const dark_mode_btn = document.querySelector("[data-dark-mode]")
+const dark_mode_txt = document.querySelector("[data-dark-mode-text]")
 const dark_mode_switch_key = document.querySelector("[data-dark-mode__switch-key]")
 
 let dark_mode_on = false
@@ -14,11 +17,62 @@ dark_mode_btn.addEventListener('click', function(e) {
   if(dark_mode_on)
   {
     dark_mode_on = false
+    document.body.style.backgroundColor = null
     dark_mode_switch_key.style.transform = null
+    dark_mode_txt.classList.remove("dark-mode-on")
+    dark_mode_txt.classList.add("dark-mode-off")
+    
+    converter_form.classList.remove("dark-mode-on")
+    converter_form.classList.add("dark-mode-off")
+   
+    amount_cta.classList.remove("dark-mode-on")
+    amount_cta.classList.add("dark-mode-off")
+    
+    result_display_cta.classList.remove("dark-mode-on")
+    result_display_cta.classList.add("dark-mode-off")
+
+    for (let i = 0; i < currencies_options.length; i++) {
+      currencies_options[i].classList.remove("dark-mode-on")
+      currencies_options[i].classList.add("dark-mode-off")
+    }
+    for (let i = 0; i < numpad.children.length; i++) {
+      numpad.children[i].classList.remove("dark-mode-on")
+      numpad.children[i].classList.add("dark-mode-off")
+    }
+    for (let i = 0; i < operators.children.length; i++) {
+      operators.children[i].classList.remove("dark-mode-on")
+      operators.children[i].classList.add("dark-mode-off")
+    }
   }
   else {
     dark_mode_on = true
+    document.body.style.backgroundColor = "#504749"
     dark_mode_switch_key.style.transform = "translateX(100%)"
+    
+    dark_mode_txt.classList.remove("dark-mode-off")
+    dark_mode_txt.classList.add("dark-mode-on")
+
+    converter_form.classList.remove("dark-mode-off")
+    converter_form.classList.add("dark-mode-on")
+    
+    amount_cta.classList.remove("dark-mode-off")
+    amount_cta.classList.add("dark-mode-on")
+    
+    result_display_cta.classList.remove("dark-mode-off")
+    result_display_cta.classList.add("dark-mode-on")
+
+    for (let i = 0; i < currencies_options.length; i++) {
+      currencies_options[i].classList.remove("dark-mode-off")
+      currencies_options[i].classList.add("dark-mode-on")
+    }
+    for (let i = 0; i < numpad.children.length; i++) {
+      numpad.children[i].classList.remove("dark-mode-off")
+      numpad.children[i].classList.add("dark-mode-on")
+    }
+    for (let i = 0; i < operators.children.length; i++) {
+      operators.children[i].classList.remove("dark-mode-off")
+      operators.children[i].classList.add("dark-mode-on")
+    }
   }
 })
 

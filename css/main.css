@@ -35,10 +35,17 @@ img {
 
 .dark-mode-cta p.dark-mode {
   cursor: pointer;
-  color: #504749;
   font-size: 2rem;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.dark-mode-cta p.dark-mode.dark-mode-off {
+  color: #504749;
+}
+
+.dark-mode-cta p.dark-mode.dark-mode-on {
+  color: #EDE7D0;
 }
 
 .dark-mode-cta .dark-mode__switch {
@@ -75,8 +82,15 @@ img {
   width: 50%;
 }
 
-.converter .input form.converter__form {
+.converter .input form.converter__form.dark-mode-off {
   background-color: #504749;
+}
+
+.converter .input form.converter__form.dark-mode-on {
+  background-color: #ede7d02f;
+}
+
+.converter .input form.converter__form {
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,11 +112,18 @@ img {
   margin-bottom: 0;
 }
 
+.converter .input form.converter__form select.dark-mode-off {
+  background-color: #B4B592;
+}
+
+.converter .input form.converter__form select.dark-mode-on {
+  background-color: #ede7d056;
+}
+
 .converter .input form.converter__form select {
   cursor: pointer;
   font-size: 2rem;
   color: #504749;
-  background-color: #B4B592;
   border: none;
   width: 100%;
   border-radius: 10px;
@@ -120,17 +141,24 @@ img {
   margin-bottom: 1.1rem;
 }
 
-.converter .input form.converter__form .amount .amount-container {
+.converter .input form.converter__form .amount .amount-container.dark-mode-off {
   background-color: #B4B592;
+}
+
+.converter .input form.converter__form .amount .amount-container.dark-mode-on {
+  background-color: #ede7d056;
+}
+
+.converter .input form.converter__form .amount .amount-container {
   padding: .5rem 1rem;
   border-radius: 10px;
 }
 
 .converter .input form.converter__form .amount input {
+  background-color: transparent;
   font-size: 2rem;
   color: #504749;
   border: none;
-  background-color: #B4B592;
   width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -161,11 +189,18 @@ img {
           transform: translateY(0.6rem);
 }
 
+.converter .input form.converter__form .results.dark-mode-off {
+  background-color: #B4B592;
+}
+
+.converter .input form.converter__form .results.dark-mode-on {
+  background-color: #ede7d056;
+}
+
 .converter .input form.converter__form .results {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #B4B592;
   border-radius: 10px;
   height: 3.5rem;
   font-size: 2rem;
@@ -212,7 +247,6 @@ img {
 
 .converter .keyboard .key {
   cursor: pointer;
-  background-color: #504749;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,8 +265,20 @@ img {
   font-size: 2rem;
 }
 
-.converter .keyboard .key:hover {
+.converter .keyboard .key.dark-mode-off {
+  background-color: #504749;
+}
+
+.converter .keyboard .key.dark-mode-on {
+  background-color: #ede7d02f;
+}
+
+.converter .keyboard .key.dark-mode-off:hover {
   background-color: #504749e3;
+}
+
+.converter .keyboard .key.dark-mode-on:hover {
+  background-color: #ede7d052;
 }
 
 .converter .keyboard .double-width {
